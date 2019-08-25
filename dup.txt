@@ -1,0 +1,25 @@
+
+		var org [] = [10,20 , 30, 10,40];
+		let max = org[0];
+		for(let i = 0 ; i<org.length;i++) {
+			if(org[i]>max) {
+				max = org[i];
+			}
+		}
+let x = [];
+for(let i= 1 ; i<=max; i++){
+x.push(0);
+}
+		//let x [] = new int[max+1];
+		for(let i = 0 ; i<org.length;i++) {
+			x[org[i]]++;
+		}
+		max = 0;
+		let j = 0;
+		for(let i = 0 ; i<x.length;i++) {
+			if(x[i]>max) {
+				max = x[i];
+				j = i;
+			}
+		}
+		console.log("Duplicate is "+j+" Occur "+max);
